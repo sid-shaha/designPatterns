@@ -7,6 +7,6 @@ public class ChesseTopping extends ToppingsDecorator{
 
     @Override
     public int cost() {
-        return basePizza.cost()+200;
+        return basePizza.cost()+73;
     }
 }
