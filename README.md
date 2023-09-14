@@ -15,7 +15,18 @@ Abstract Factory is a type of creational design pattern.
 This pattern uses super-factory(factory of factories) that create other factories.
 It is used to abstract the object creation.
 
-![AbstractFactory2](https://github.com/sid-shaha/designPatterns/assets/120220394/e9ecb40a-5367-4a0d-9cdf-9b5aaf0d5dd1)
+![AbstractFactory](https://github.com/sid-shaha/designPatterns/assets/120220394/e9ecb40a-5367-4a0d-9cdf-9b5aaf0d5dd1)
+
+
+## Singleton Pattern
+
+The Singleton Pattern is a type of creational design pattern. 
+One of the easiest design patterns.
+When we need to have only one instance of our class we can use a singleton pattern.
+For example, creating a DB connection once and sharing it in multiple objects rather than creating new connections every time.
+
+![SingletonPattern](https://github.com/sid-shaha/designPatterns/assets/120220394/518f12c0-99c6-43a6-94bb-d15ff30d9991)
+
 
 
 ## Decorator Pattern
@@ -27,4 +38,4 @@ This pattern acts as a wrapper to an existing class.
 This pattern creates a decorator class which wraps the original class and provides additional functionality keeping class methods signature intact.
 
 
-![DecoratorPattern2](https://github.com/sid-shaha/designPatterns/assets/120220394/9072e7e6-c82b-406c-b00a-8173130dc41f)
+![DecoratorPattern](https://github.com/sid-shaha/designPatterns/assets/120220394/9072e7e6-c82b-406c-b00a-8173130dc41f)
