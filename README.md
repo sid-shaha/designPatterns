@@ -41,3 +41,15 @@ This pattern creates a decorator class which wraps the original class and provid
 
 
 ![DecoratorPattern](https://github.com/sid-shaha/designPatterns/assets/120220394/9072e7e6-c82b-406c-b00a-8173130dc41f)
+
+## Observer Pattern
+
+Observer pattern is a type of Behavioural design pattern. 
+Observer pattern is used when one of the objects is modified and we want to notify multiple objects about the event that has occured.
+This pattern has two main actors i.e. Subject and Observer.
+
+![ObserverPattern](https://github.com/sid-shaha/designPatterns/assets/120220394/70f37b1c-a359-4915-a66e-9f56173ef740)
+
+
+
+
