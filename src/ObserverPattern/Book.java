@@ -1,8 +1,9 @@
 package ObserverPattern;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
+public class Book implements Subject{
     private int id;
     private String name;
     private String author;
@@ -11,16 +12,13 @@ public class Book {
 
     private boolean availability;
 
-    public int getId() {
-        return id;
-    }
 
-    public Book(int id, String name, String author, List<Observer> observers, boolean availability) {
+    public Book(int id, String name, String author, boolean availability) {
         this.id = id;
         this.name = name;
         this.author = author;
-        this.observers = observers;
         this.availability = availability;
+        this.observers = new ArrayList<>();
     }
 
     public boolean isAvailability() {
@@ -29,13 +27,12 @@ public class Book {
 
     public void setAvailability(boolean availability) {
         this.availability = availability;
-        if(availability){
-            for (Observer observer : observers) {
-                observer.update(this);
-            }
-        }
+        availabilityChanged();
     }
 
+    public int getId() {
+        return id;
+    }
     public void setId(int id) {
         this.id = id;
     }
@@ -56,11 +53,28 @@ public class Book {
         this.author = author;
     }
 
-    public List<Observer> getObservers() {
-        return observers;
+
+    public void availabilityChanged(){
+        notifyObservers();
     }
 
-    public void setObservers(List<Observer> observers) {
-        this.observers = observers;
+    @Override
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for(Observer observer : observers){
+            observer.update(this);
+        }
+    }
+
+    @Override
+    public void removeObserver(Observer observer) {
+        int index = observers.indexOf(observer);
+        if(index>=0){
+            observers.remove(index);
+        }
     }
 }
